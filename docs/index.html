@@ -646,6 +646,10 @@
     zoomPerScroll: 1.2,
     animationTime: 0.4,
     crossOriginPolicy: "Anonymous",
+    // ARC の画像サーバ（arc.ritsumei.ac.jp）は WAF がセッション初回の要求を落とすことがあるため、
+    // タイル取得失敗時に少し待って再試行する。
+    tileRetryMax: 3,
+    tileRetryDelay: 1500,
     gestureSettingsMouse: { clickToZoom: false, dblClickToZoom: true, scrollToZoom: true, dragToPan: true },
     gestureSettingsTouch: { clickToZoom: false, dblClickToZoom: true, pinchToZoom: true, flickEnabled: true }
   });
@@ -965,6 +969,20 @@
   // イベント委譲: 結果一覧内のクリックを処理
   // サムネイル・行テキスト・専用ボタンのいずれをタップしても、そのカードのページの
   // 全画面オーバーレイを開く（行は同一ページ内のヒットなのでカード単位で開けば足りる）。
+  // サムネイル読み込み失敗時の再試行（画像サーバの WAF が初回要求を落とすことがあるため）
+  resultsEl.addEventListener("error", function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== "IMG" || !img.classList.contains("thumb")) return;
+    var tries = Number(img.getAttribute("data-retry") || "0");
+    if (tries >= 3) return;
+    img.setAttribute("data-retry", String(tries + 1));
+    var src = img.getAttribute("data-src") || img.src;
+    img.setAttribute("data-src", src);
+    setTimeout(function () {
+      img.src = src + (src.indexOf("?") === -1 ? "?" : "&") + "retry=" + (tries + 1);
+    }, 1500 * (tries + 1));
+  }, true);
+
   resultsEl.addEventListener("click", function (e) {
     var card = e.target.closest(".page-card");
     if (!card) return;

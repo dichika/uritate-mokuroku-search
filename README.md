@@ -44,6 +44,14 @@ JSON を `data/{id}/manifest.json` に保存してから `fetch.py` を再実行
 既存の `manifest.json` があればダウンロードはスキップされる。
 画像サーバ（arc.ritsumei.ac.jp）は通常の HTTP アクセスで取得できる。
 
+### 画像サーバ（arc.ritsumei.ac.jp）の挙動（2026-09-10 確認）
+
+- User-Agent に `Claude/` や `curl/` を含む要求は HTTP 403 で拒否される。`config.USER_AGENT` は
+  Chrome 相当の文字列にしている。Claude Code のアプリ内ブラウザ（UA に `Claude/` を含む）では
+  画像が一切表示されないため、動作確認は通常の Chrome で行う。
+- WAF（F5 系。`TS…`/`DMZ` クッキー）がセッション初回の並列要求を落とすことがある。
+  検索UIではサムネイルの `onerror` 再試行（最大3回）と OpenSeadragon の `tileRetryMax: 3` で吸収している。
+
 ## 初回セットアップ
 
 ```bash
