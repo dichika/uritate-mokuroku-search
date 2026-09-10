@@ -1,0 +1,1177 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>売立目録 全文検索</title>
+<style>
+  :root {
+    --bg: #f6f1e6;
+    --bg-elev: #fffdf8;
+    --text: #2b2520;
+    --text-dim: #6b6155;
+    --border: #ded2ba;
+    --accent: #7a5230;
+    --accent-text: #fffdf8;
+    --mark-bg: #f2cf5b;
+    --mark-text: #2b2520;
+    --shadow: 0 1px 4px rgba(43, 37, 32, 0.12);
+    --overlay-bg: rgb(20, 17, 14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1815;
+      --bg-elev: #26221d;
+      --text: #eae2d3;
+      --text-dim: #a89e8c;
+      --border: #443c31;
+      --accent: #d3ad7c;
+      --accent-text: #1b1815;
+      --mark-bg: #8a6d1f;
+      --mark-text: #fff7e0;
+      --shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      --overlay-bg: rgb(0, 0, 0);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: "Yu Mincho", "游明朝", "Hiragino Mincho ProN", "ヒラギノ明朝 ProN",
+      -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+      sans-serif;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  body.no-scroll { overflow: hidden; }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 12px 32px;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 12px 12px;
+  }
+  header .header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.15rem;
+    margin: 0 0 2px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  .site-desc {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin: 0 0 10px;
+  }
+  .search-box {
+    position: relative;
+  }
+  input[type="search"] {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-elev);
+    color: var(--text);
+    font-family: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  input[type="search"]::placeholder { color: var(--text-dim); }
+  input[type="search"]:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .result-count {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    min-height: 1.1em;
+  }
+  main {
+    padding-top: 14px;
+  }
+  .card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+  }
+  .card h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .meta {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-bottom: 2px;
+  }
+  .meta-sub {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+  .excerpt, .snippet {
+    font-size: 0.88rem;
+    margin: 0 0 8px;
+    word-break: break-word;
+  }
+  .detail-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    background: var(--accent);
+    color: var(--accent-text);
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  mark {
+    background: var(--mark-bg);
+    color: var(--mark-text);
+    padding: 0 1px;
+    border-radius: 2px;
+  }
+  .page-card-head {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .thumb {
+    width: 84px;
+    height: auto;
+    flex: none;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    background: var(--bg);
+    display: block;
+  }
+  .page-card-info { min-width: 0; }
+  .doc-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+    word-break: break-word;
+  }
+  .page-num {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+  ul.lines {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.lines li {
+    border-top: 1px dashed var(--border);
+    padding: 8px 0;
+  }
+  ul.lines li:first-child { border-top: none; padding-top: 0; }
+  .line-text {
+    display: block;
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+  }
+  .line-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    line-height: 1.3;
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin-right: 6px;
+    vertical-align: text-top;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .line-badge-ai {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  ul.lines li[data-hit-line] {
+    cursor: pointer;
+  }
+  ul.lines li[data-hit-line]:active {
+    background: var(--bg);
+  }
+  .line-open-btn {
+    font-size: 0.74rem;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    border-radius: 6px;
+    padding: 4px 9px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .line-open-btn:active { opacity: 0.7; }
+  .more-lines {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+  .state-msg {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    padding: 40px 10px;
+  }
+  .state-msg.error { color: #a4402e; }
+  @media (prefers-color-scheme: dark) {
+    .state-msg.error { color: #e28a75; }
+  }
+
+  /* overlay */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-bg);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  .overlay[hidden] { display: none; }
+  .overlay-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    color: #f2ece0;
+    flex: none;
+  }
+  .overlay-title {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding-right: 10px;
+  }
+  #overlayClose {
+    flex: none;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #f2ece0;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .overlay-columns {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .overlay-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+  .overlay-img-wrap {
+    position: absolute;
+    inset: 0;
+  }
+  .osd-viewer {
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    touch-action: none;
+  }
+  /* OpenSeadragon が addOverlay() でこの要素をビューア内へ再配置し、
+     位置・サイズはビューポート座標に応じて自動更新する（CSSでは指定しない）。 */
+  .overlay-line-highlight {
+    box-sizing: border-box;
+    border: 2px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 25%, transparent);
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  .overlay-line-highlight[hidden] { display: none; }
+  .overlay-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34px;
+    height: 34px;
+    border: 3px solid rgba(255,255,255,0.25);
+    border-top-color: #f2ece0;
+    border-radius: 50%;
+    animation: overlay-spin 0.8s linear infinite;
+    z-index: 3;
+  }
+  .overlay-spinner[hidden] { display: none; }
+  @keyframes overlay-spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  .osd-controls {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .overlay-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(20,17,14,0.45);
+    color: #f2ece0;
+    font-size: 1.3rem;
+    line-height: 1;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transition: background 0.15s ease, opacity 0.15s ease;
+    touch-action: manipulation;
+  }
+  .overlay-nav-prev { left: 10px; }
+  .overlay-nav-next { right: 10px; }
+  .overlay-nav-btn:hover { background: rgba(20,17,14,0.7); }
+  .overlay-nav-btn:active { background: rgba(20,17,14,0.85); }
+  .overlay-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+    background: rgba(20,17,14,0.3);
+  }
+  .overlay-page-chip {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    background: rgba(20,17,14,0.55);
+    color: #f2ece0;
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+  }
+  .osd-control-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(20,17,14,0.55);
+    color: #f2ece0;
+    font-size: 1.1rem;
+    line-height: 1;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .osd-control-btn:active { background: rgba(20,17,14,0.8); }
+  .overlay-transcript {
+    flex: none;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    background: rgba(0,0,0,0.15);
+  }
+  .transcript-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #f2ece0;
+    font-family: inherit;
+    font-size: 0.83rem;
+    padding: 10px 14px;
+    cursor: pointer;
+  }
+  .transcript-body {
+    max-height: 38vh;
+    overflow-y: auto;
+    padding: 0 14px 14px;
+  }
+  .transcript-body[hidden] { display: none; }
+  .transcript-panel-header {
+    display: none;
+  }
+  .transcript-line {
+    font-size: 0.85rem;
+    color: #f2ece0;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+  .transcript-line[data-ocr-idx] {
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 3px 6px;
+    margin: 0 -6px 10px;
+  }
+  .transcript-line[data-ocr-idx]:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .transcript-line[data-ocr-idx].is-selected {
+    background: color-mix(in srgb, var(--accent) 24%, transparent);
+  }
+  .transcript-empty {
+    font-size: 0.8rem;
+    color: #cfc6b6;
+    padding-bottom: 4px;
+  }
+  .overlay-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    line-height: 1.3;
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin-right: 6px;
+    vertical-align: text-top;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #cfc6b6;
+  }
+  .overlay-badge-ai {
+    border-color: #d3ad7c;
+    color: #d3ad7c;
+  }
+  .transcript-body mark {
+    background: #f2cf5b;
+    color: #2b2520;
+    padding: 0 1px;
+    border-radius: 2px;
+  }
+  .overlay-footer {
+    flex: none;
+    padding: 10px 14px 18px;
+    text-align: center;
+  }
+  .overlay-footer a {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--accent-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 9px 18px;
+    border-radius: 999px;
+  }
+
+  /* ワイドレイアウト: 画像の右隣に翻刻パネルを常時表示する */
+  @media (min-width: 700px), (orientation: landscape) {
+    .overlay-columns {
+      flex-direction: row;
+      min-height: 0;
+    }
+    .overlay-body {
+      flex: 0 0 62%;
+      max-width: 62%;
+    }
+    .overlay-transcript {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-top: none;
+      border-left: 1px solid rgba(255,255,255,0.18);
+    }
+    .transcript-toggle {
+      display: none;
+    }
+    .transcript-panel-header {
+      display: block;
+      flex: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #f2ece0;
+      padding: 12px 14px 6px;
+    }
+    .transcript-body {
+      flex: 1 1 auto;
+      min-height: 0;
+      max-height: none;
+    }
+    /* パネルは常時展開しておく（JS側の hidden 属性トグルはそのままでよい） */
+    .transcript-body[hidden] {
+      display: block;
+    }
+  }
+
+  footer {
+    max-width: 720px;
+    margin: 24px auto 0;
+    padding: 16px 12px 40px;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border);
+  }
+  footer p { margin: 0 0 8px; }
+  footer a { color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1>売立目録 全文検索</h1>
+    <p class="site-desc">売立目録（入札目録）の活字OCRテキストをスマートフォンから横断検索できます。</p>
+    <div class="search-box">
+      <input type="search" id="searchInput" placeholder="例: 渡唐天神 山水 三十六歌仙" autocomplete="off" aria-label="検索キーワード">
+    </div>
+    <div class="result-count" id="resultCount"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <main id="results">
+    <div class="state-msg" id="initialMsg">読み込み中…</div>
+  </main>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="overlay-header">
+    <div class="overlay-title" id="overlayTitle"></div>
+    <button type="button" id="overlayClose" aria-label="閉じる">✕</button>
+  </div>
+  <div class="overlay-columns" id="overlayColumns">
+    <div class="overlay-body" id="overlayBody">
+      <div class="overlay-img-wrap">
+        <div id="osdViewer" class="osd-viewer"></div>
+        <div class="overlay-spinner" id="overlaySpinner" hidden></div>
+        <div class="overlay-line-highlight" id="overlayLineHighlight" hidden></div>
+        <button type="button" id="overlayPrevBtn" class="overlay-nav-btn overlay-nav-prev" aria-label="前のコマ">←</button>
+        <button type="button" id="overlayNextBtn" class="overlay-nav-btn overlay-nav-next" aria-label="次のコマ">→</button>
+        <div class="overlay-page-chip" id="overlayPageIndicator"></div>
+        <div class="osd-controls">
+          <button type="button" id="osdZoomInBtn" class="osd-control-btn" aria-label="拡大">＋</button>
+          <button type="button" id="osdZoomOutBtn" class="osd-control-btn" aria-label="縮小">−</button>
+          <button type="button" id="osdHomeBtn" class="osd-control-btn" aria-label="全体表示">⌂</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay-transcript">
+      <button type="button" id="overlayTranscriptToggle" class="transcript-toggle" aria-expanded="false">このコマの翻刻を見る ▾</button>
+      <div class="transcript-panel-header">このコマの翻刻</div>
+      <div class="transcript-body" id="overlayTranscriptBody" hidden></div>
+    </div>
+  </div>
+  <div class="overlay-footer">
+    <a id="overlayViewerLink" href="#" target="_blank" rel="noopener noreferrer">IIIFビューアで見る ↗</a>
+  </div>
+</div>
+
+<footer>
+  <p>画像・資料: 立命館大学アート・リサーチセンター ARC書籍閲覧システム（<a href="https://www.dh-jac.net/db1/books/" target="_blank" rel="noopener noreferrer">https://www.dh-jac.net/db1/books/</a>）が公開する IIIF マニフェストと画像を表示しています。原資料は各所蔵機関（UC Berkeley East Asian Library 等）の所蔵です。</p>
+  <p>本文テキストは NDLOCR-Lite による機械翻刻であり、誤読を含みます。原典の確認には必ず画像またはアーカイブ本体をご参照ください。</p>
+  <p>一部ページには Claude による試験的なAI翻刻を併載している場合があります。こちらも誤読を含みます。</p>
+  <p>OCR: NDLOCR-Lite（国立国会図書館, CC BY 4.0）</p>
+  <p>ビューア: OpenSeadragon（BSD-3-Clause）を使用しています。</p>
+</footer>
+
+<script src="./vendor/openseadragon/openseadragon.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var allData = null;
+  var resultsEl = document.getElementById("results");
+  var resultCountEl = document.getElementById("resultCount");
+  var searchInput = document.getElementById("searchInput");
+  var overlayEl = document.getElementById("overlay");
+  var osdViewerEl = document.getElementById("osdViewer");
+  var overlayTitle = document.getElementById("overlayTitle");
+  var overlayViewerLink = document.getElementById("overlayViewerLink");
+  var overlayCloseBtn = document.getElementById("overlayClose");
+  var overlaySpinner = document.getElementById("overlaySpinner");
+  var overlayLineHighlight = document.getElementById("overlayLineHighlight");
+  var overlayPrevBtn = document.getElementById("overlayPrevBtn");
+  var overlayNextBtn = document.getElementById("overlayNextBtn");
+  var overlayPageIndicator = document.getElementById("overlayPageIndicator");
+  var overlayTranscriptToggle = document.getElementById("overlayTranscriptToggle");
+  var overlayTranscriptBody = document.getElementById("overlayTranscriptBody");
+  var osdZoomInBtn = document.getElementById("osdZoomInBtn");
+  var osdZoomOutBtn = document.getElementById("osdZoomOutBtn");
+  var osdHomeBtn = document.getElementById("osdHomeBtn");
+  var lastSearchTerms = [];
+  var overlayState = { doc: null, pages: null, index: -1, terms: [], highlightLineIdx: -1 };
+
+  // OpenSeadragon ビューアはオーバーレイ内で1インスタンスを使い回す。
+  // ナビゲーションボタン画像は使わず、自前のHTMLボタン（osdZoomInBtn等）で操作する。
+  var viewer = OpenSeadragon({
+    element: osdViewerEl,
+    showNavigationControl: false,
+    showNavigator: false,
+    showSequenceControl: false,
+    visibilityRatio: 1,
+    constrainDuringPan: true,
+    minZoomImageRatio: 0.9,
+    maxZoomPixelRatio: 4,
+    zoomPerClick: 1.8,
+    zoomPerScroll: 1.2,
+    animationTime: 0.4,
+    crossOriginPolicy: "Anonymous",
+    gestureSettingsMouse: { clickToZoom: false, dblClickToZoom: true, scrollToZoom: true, dragToPan: true },
+    gestureSettingsTouch: { clickToZoom: false, dblClickToZoom: true, pinchToZoom: true, flickEnabled: true }
+  });
+  // デバッグ用（非表示タブでの動作検証などに使う）
+  window._osdViewer = viewer;
+  viewer.addHandler("open", function () {
+    overlaySpinner.setAttribute("hidden", "");
+  });
+  viewer.addHandler("open-failed", function () {
+    overlaySpinner.setAttribute("hidden", "");
+  });
+
+  // ---------- 正規化 ----------
+
+  function normalize(str) {
+    if (!str) return "";
+    var n = String(str).normalize("NFKC");
+    n = n.replace(/[ァ-ヶ]/g, function (c) {
+      return String.fromCharCode(c.charCodeAt(0) - 0x60);
+    });
+    return n.toLowerCase();
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  // 文字単位（コードポイント単位）で正規化前後の対応を保持し、
+  // ハイライト表示の際に元テキストへ位置を戻せるようにする。
+  function buildNormMap(str) {
+    var chars = Array.from(str || "");
+    var normChars = [];
+    var map = [];
+    chars.forEach(function (ch, idx) {
+      var n = ch.normalize("NFKC");
+      n = n.replace(/[ァ-ヶ]/g, function (c) {
+        return String.fromCharCode(c.charCodeAt(0) - 0x60);
+      });
+      n = n.toLowerCase();
+      for (var i = 0; i < n.length; i++) {
+        normChars.push(n[i]);
+        map.push(idx);
+      }
+    });
+    return { normStr: normChars.join(""), map: map, chars: chars };
+  }
+
+  function findRanges(normStr, map, terms) {
+    var ranges = [];
+    terms.forEach(function (term) {
+      if (!term) return;
+      var start = 0;
+      while (true) {
+        var idx = normStr.indexOf(term, start);
+        if (idx === -1) break;
+        var origStart = map[idx];
+        var origEnd = map[idx + term.length - 1] + 1;
+        ranges.push([origStart, origEnd]);
+        start = idx + 1;
+      }
+    });
+    ranges.sort(function (a, b) { return a[0] - b[0]; });
+    var merged = [];
+    ranges.forEach(function (r) {
+      var last = merged[merged.length - 1];
+      if (last && r[0] <= last[1]) {
+        last[1] = Math.max(last[1], r[1]);
+      } else {
+        merged.push(r.slice());
+      }
+    });
+    return merged;
+  }
+
+  // テキスト全体を<mark>付きHTMLに変換する
+  function highlightHTML(origText, terms) {
+    if (!origText) return "";
+    var m = buildNormMap(origText);
+    var ranges = findRanges(m.normStr, m.map, terms);
+    if (ranges.length === 0) return escapeHtml(origText);
+    var html = "";
+    var pos = 0;
+    ranges.forEach(function (r) {
+      html += escapeHtml(m.chars.slice(pos, r[0]).join(""));
+      html += "<mark>" + escapeHtml(m.chars.slice(r[0], r[1]).join("")) + "</mark>";
+      pos = r[1];
+    });
+    html += escapeHtml(m.chars.slice(pos).join(""));
+    return html;
+  }
+
+  // 最初のヒット位置の前後 context 文字を切り出してハイライトする（書誌用スニペット）
+  function snippetHTML(origText, terms, context) {
+    context = context || 60;
+    if (!origText) return "";
+    var m = buildNormMap(origText);
+    var ranges = findRanges(m.normStr, m.map, terms);
+    if (ranges.length === 0) {
+      var head = m.chars.slice(0, 100).join("");
+      return escapeHtml(head) + (m.chars.length > 100 ? "…" : "");
+    }
+    var first = ranges[0];
+    var start = Math.max(0, first[0] - context);
+    var end = Math.min(m.chars.length, first[1] + context);
+    var html = "";
+    var pos = start;
+    ranges.forEach(function (r) {
+      if (r[1] <= start || r[0] >= end) return;
+      var cs = Math.max(r[0], start);
+      var ce = Math.min(r[1], end);
+      html += escapeHtml(m.chars.slice(pos, cs).join(""));
+      html += "<mark>" + escapeHtml(m.chars.slice(cs, ce).join("")) + "</mark>";
+      pos = ce;
+    });
+    html += escapeHtml(m.chars.slice(pos, end).join(""));
+    var prefix = start > 0 ? "…" : "";
+    var suffix = end < m.chars.length ? "…" : "";
+    return prefix + html + suffix;
+  }
+
+  // ---------- データ読み込み・前計算 ----------
+
+  function precompute(data) {
+    (data.documents || []).forEach(function (doc) {
+      doc._normTitle = normalize(doc.title);
+      doc._normCommentary = normalize(doc.commentary);
+      (doc.pages || []).sort(function (a, b) { return (a.n || 0) - (b.n || 0); });
+      (doc.pages || []).forEach(function (page) {
+        (page.lines || []).forEach(function (line) {
+          line._norm = normalize(line.t);
+          line.type = "ocr";
+        });
+        // AI翻刻行（座標なし）。存在しないページもあるので undefined 耐性を持たせる。
+        page._aiLines = (page.ai || []).map(function (t) {
+          return { t: t, _norm: normalize(t), type: "ai" };
+        });
+      });
+    });
+  }
+
+  function init() {
+    fetch("./data/index.json")
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        allData = data;
+        precompute(allData);
+        renderDocList();
+      })
+      .catch(function () {
+        showError();
+      });
+  }
+
+  function showError() {
+    resultCountEl.textContent = "";
+    resultsEl.innerHTML =
+      '<div class="state-msg error">index.json が見つかりません。<br>データファイルが未生成か、配置場所をご確認ください。</div>';
+  }
+
+  // ---------- 検索 ----------
+
+  function runSearch(query) {
+    var terms = normalize(query).trim().split(/\s+/).filter(Boolean);
+    if (terms.length === 0) return null;
+    var commentaryHits = [];
+    var pageHits = [];
+    allData.documents.forEach(function (doc) {
+      var combined = doc._normTitle + "\n" + doc._normCommentary;
+      var allIn = terms.every(function (t) { return combined.indexOf(t) !== -1; });
+      if (allIn) commentaryHits.push(doc);
+
+      (doc.pages || []).forEach(function (page) {
+        var hitLines = [];
+        (page.lines || []).forEach(function (line) {
+          var ok = terms.every(function (t) { return line._norm.indexOf(t) !== -1; });
+          if (ok) hitLines.push(line);
+        });
+        (page._aiLines || []).forEach(function (line) {
+          var ok = terms.every(function (t) { return line._norm.indexOf(t) !== -1; });
+          if (ok) hitLines.push(line);
+        });
+        if (hitLines.length > 0) {
+          pageHits.push({ doc: doc, page: page, hitLines: hitLines });
+        }
+      });
+    });
+    return { terms: terms, commentaryHits: commentaryHits, pageHits: pageHits };
+  }
+
+  function handleSearch(query) {
+    if (!allData) return;
+    var trimmed = query.trim();
+    if (trimmed === "") {
+      lastSearchTerms = [];
+      renderDocList();
+      return;
+    }
+    var result = runSearch(trimmed);
+    lastSearchTerms = result.terms;
+    renderSearchResults(result);
+  }
+
+  var debounceTimer = null;
+  searchInput.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
+    var v = searchInput.value;
+    debounceTimer = setTimeout(function () { handleSearch(v); }, 300);
+  });
+
+  // ---------- 表示: 資料一覧（検索語なし） ----------
+
+  function renderDocList() {
+    var docs = allData.documents || [];
+    resultCountEl.textContent = docs.length + " 件の資料を収録しています";
+    if (docs.length === 0) {
+      resultsEl.innerHTML = '<div class="state-msg">収録された資料がありません。</div>';
+      return;
+    }
+    var html = docs.map(function (doc) {
+      var pageCount = (doc.pages || []).length;
+      var excerpt = (doc.commentary || "").slice(0, 100);
+      var more = (doc.commentary || "").length > 100 ? "…" : "";
+      return (
+        '<div class="card doc-card">' +
+        "<h3>" + escapeHtml(doc.title || "") + "</h3>" +
+        '<div class="meta">' + escapeHtml(doc.owner || "") +
+          (doc.genre ? " ・ " + escapeHtml(doc.genre) : "") + "</div>" +
+        '<div class="meta-sub">' +
+          (doc.yearJa ? "刊行: " + escapeHtml(doc.yearJa) + (doc.year ? "（" + escapeHtml(doc.year) + "）" : "") + " ・ " : "") +
+          (doc.code ? "請求記号: " + escapeHtml(doc.code) + " ・ " : "") +
+          "全" + pageCount + "コマ</div>" +
+        '<p class="excerpt">' + escapeHtml(excerpt) + more + "</p>" +
+        (doc.detailUrl
+          ? '<a class="detail-link" href="' + escapeHtml(doc.detailUrl) + '" target="_blank" rel="noopener noreferrer">ARC書籍ポータルで見る ↗</a>'
+          : "") +
+        "</div>"
+      );
+    }).join("");
+    resultsEl.innerHTML = html;
+  }
+
+  // ---------- 表示: 検索結果 ----------
+
+  function renderSearchResults(result) {
+    var terms = result.terms;
+    var commentaryHits = result.commentaryHits;
+    var pageHits = result.pageHits;
+
+    if (pageHits.length === 0 && commentaryHits.length === 0) {
+      resultCountEl.textContent = "見つかりませんでした";
+      resultsEl.innerHTML = '<div class="state-msg">見つかりませんでした。キーワードを変えてお試しください。</div>';
+      return;
+    }
+
+    resultCountEl.textContent = pageHits.length + " ページがヒット";
+
+    var html = "";
+
+    commentaryHits.forEach(function (doc) {
+      html +=
+        '<div class="card commentary-card">' +
+        '<div class="badge">書誌にヒット</div>' +
+        "<h3>" + highlightHTML(doc.title || "", terms) + "</h3>" +
+        '<div class="meta">' + escapeHtml(doc.owner || "") +
+          (doc.genre ? " ・ " + escapeHtml(doc.genre) : "") + "</div>" +
+        '<p class="snippet">' + snippetHTML(doc.commentary || "", terms) + "</p>" +
+        (doc.detailUrl
+          ? '<a class="detail-link" href="' + escapeHtml(doc.detailUrl) + '" target="_blank" rel="noopener noreferrer">ARC書籍ポータルで見る ↗</a>'
+          : "") +
+        "</div>";
+    });
+
+    pageHits.forEach(function (hit, hitIdx) {
+      var doc = hit.doc;
+      var page = hit.page;
+      var lines = hit.hitLines;
+      var shown = lines.slice(0, 5);
+      var restCount = lines.length - shown.length;
+
+      var linesHtml = shown.map(function (line) {
+        var isAi = line.type === "ai";
+        var badgeHtml = '<span class="line-badge' + (isAi ? " line-badge-ai" : "") + '">' +
+          (isAi ? "AI翻刻" : "OCR") + "</span>";
+        // 行タップ・専用ボタンのどちらでも同じページの全画面オーバーレイを開く。
+        return (
+          '<li data-hit-line="1">' +
+          '<span class="line-text">' + badgeHtml + highlightHTML(line.t || "", terms) + "</span>" +
+          '<button type="button" class="line-open-btn">このページの画像を見る</button>' +
+          "</li>"
+        );
+      }).join("") + (restCount > 0 ? '<li class="more-lines">他' + restCount + "行</li>" : "");
+
+      html +=
+        '<div class="card page-card" data-doc-idx="' + escapeHtml(String(doc.id)) + '" data-page-n="' + escapeHtml(String(page.n)) + '">' +
+        '<div class="page-card-head">' +
+        '<img class="thumb" loading="lazy" alt="' + escapeHtml(doc.title || "") + " " + escapeHtml(String(page.n)) + 'コマ目のサムネイル" src="' + escapeHtml(page.iiif) + 'full/400,/0/default.jpg" data-thumb-open="1">' +
+        '<div class="page-card-info">' +
+        '<div class="doc-title">' + escapeHtml(doc.title || "") + "</div>" +
+        '<div class="page-num">' + escapeHtml(String(page.n)) + " コマ目</div>" +
+        "</div>" +
+        "</div>" +
+        '<ul class="lines" data-hit-idx="' + hitIdx + '">' + linesHtml + "</ul>" +
+        "</div>";
+    });
+
+    resultsEl.innerHTML = html;
+
+    // オーバーレイのページ送りに使う参照を保持
+    resultsEl.__pageHits = pageHits;
+  }
+
+  // イベント委譲: 結果一覧内のクリックを処理
+  // サムネイル・行テキスト・専用ボタンのいずれをタップしても、そのカードのページの
+  // 全画面オーバーレイを開く（行は同一ページ内のヒットなのでカード単位で開けば足りる）。
+  resultsEl.addEventListener("click", function (e) {
+    var card = e.target.closest(".page-card");
+    if (!card) return;
+    var trigger = e.target.closest("[data-thumb-open], .line-open-btn, li[data-hit-line]");
+    if (trigger) {
+      openOverlayFromCard(card);
+    }
+  });
+
+  function openOverlayFromCard(card) {
+    if (!card || !resultsEl.__pageHits) return;
+    var docId = card.getAttribute("data-doc-idx");
+    var pageN = card.getAttribute("data-page-n");
+    var hit = resultsEl.__pageHits.find(function (h) {
+      return String(h.doc.id) === docId && String(h.page.n) === pageN;
+    });
+    if (!hit) return;
+    openOverlay(hit.doc, hit.page);
+  }
+
+  // ---------- 全画面オーバーレイ ----------
+
+  // 表示中コマの翻刻（AI翻刻→OCRの順）をハイライト付きHTMLとして組み立てる
+  function pageTranscriptHTML(page, terms) {
+    var parts = [];
+    (page._aiLines || []).forEach(function (line) {
+      parts.push(
+        '<div class="transcript-line" title="AI翻刻行は位置情報がないためハイライトできません">' +
+        '<span class="overlay-badge overlay-badge-ai">AI翻刻</span>' +
+        highlightHTML(line.t || "", terms) +
+        "</div>"
+      );
+    });
+    (page.lines || []).forEach(function (line, idx) {
+      var hasBox = Array.isArray(line.b) && line.b.length === 4;
+      parts.push(
+        '<div class="transcript-line"' + (hasBox ? ' data-ocr-idx="' + idx + '"' : "") + ">" +
+        '<span class="overlay-badge">OCR</span>' +
+        highlightHTML(line.t || "", terms) +
+        "</div>"
+      );
+    });
+    if (parts.length === 0) {
+      return '<div class="transcript-empty">このコマには翻刻データがありません。</div>';
+    }
+    return parts.join("");
+  }
+
+  // ---------- OCR行クリックによる画像ハイライト（OpenSeadragon overlay） ----------
+
+  // 元画像ピクセル座標の矩形をビューポート座標に変換し、OSDのoverlay APIで配置する。
+  // ズーム・パンが変化しても OpenSeadragon 側が自動的に追従して再配置してくれる。
+  function positionLineHighlight(box) {
+    var rect = viewer.viewport.imageToViewportRectangle(box[0], box[1], box[2], box[3]);
+    viewer.removeOverlay(overlayLineHighlight);
+    viewer.addOverlay(overlayLineHighlight, rect);
+    return true;
+  }
+
+  function clearLineHighlight() {
+    overlayState.highlightLineIdx = -1;
+    viewer.removeOverlay(overlayLineHighlight);
+    overlayLineHighlight.setAttribute("hidden", "");
+    var selected = overlayTranscriptBody.querySelector(".transcript-line.is-selected");
+    if (selected) selected.classList.remove("is-selected");
+  }
+
+  // 選択中のOCR行を再クリックしたら解除、別の行をクリックしたら移動する。
+  function toggleLineHighlight(idx, lineEl) {
+    var page = overlayState.pages && overlayState.pages[overlayState.index];
+    var line = page && page.lines && page.lines[idx];
+    if (!line || !Array.isArray(line.b)) return;
+
+    if (overlayState.highlightLineIdx === idx) {
+      clearLineHighlight();
+      return;
+    }
+
+    var prevSelected = overlayTranscriptBody.querySelector(".transcript-line.is-selected");
+    if (prevSelected) prevSelected.classList.remove("is-selected");
+    lineEl.classList.add("is-selected");
+    overlayState.highlightLineIdx = idx;
+
+    positionLineHighlight(line.b);
+    overlayLineHighlight.removeAttribute("hidden");
+  }
+
+  overlayTranscriptBody.addEventListener("click", function (e) {
+    var lineEl = e.target.closest(".transcript-line[data-ocr-idx]");
+    if (!lineEl) return;
+    var idx = Number(lineEl.getAttribute("data-ocr-idx"));
+    toggleLineHighlight(idx, lineEl);
+  });
+
+  // IIIF画像（info.json）の読み込み中はスピナーを表示し、'open'/'open-failed' で消す
+  // （ハンドラはビューア生成時に一度だけ登録済み）。
+  function setOverlayImage(page) {
+    overlaySpinner.removeAttribute("hidden");
+    viewer.open(page.iiif + "info.json");
+  }
+
+  function updateOverlayForCurrentPage() {
+    clearLineHighlight();
+    var page = overlayState.pages[overlayState.index];
+    setOverlayImage(page);
+    overlayPageIndicator.textContent = page.n + " / " + overlayState.pages.length + " コマ目" + (page.label ? "（" + page.label + "）" : "");
+    overlayPrevBtn.disabled = overlayState.index <= 0;
+    overlayNextBtn.disabled = overlayState.index >= overlayState.pages.length - 1;
+    overlayTranscriptBody.innerHTML = pageTranscriptHTML(page, overlayState.terms);
+  }
+
+  // ページ送り時はズームをリセットする（viewer.open() が内部で goHome() し、全体表示に戻る）。
+  function navigateOverlay(delta) {
+    if (!overlayState.pages || overlayState.pages.length === 0) return;
+    var next = overlayState.index + delta;
+    if (next < 0 || next >= overlayState.pages.length) return;
+    overlayState.index = next;
+    updateOverlayForCurrentPage();
+  }
+
+  function openOverlay(doc, page) {
+    var pages = doc.pages || [];
+    var idx = pages.indexOf(page);
+    overlayState.doc = doc;
+    overlayState.pages = pages;
+    overlayState.index = idx === -1 ? 0 : idx;
+    overlayState.terms = lastSearchTerms;
+
+    // 翻刻セクションは開くたびに初期状態（閉）へ戻す。ページ送り中は維持する。
+    overlayTranscriptBody.setAttribute("hidden", "");
+    overlayTranscriptToggle.setAttribute("aria-expanded", "false");
+    overlayTranscriptToggle.textContent = "このコマの翻刻を見る ▾";
+
+    overlayTitle.textContent = doc.title || "";
+    overlayViewerLink.href = doc.viewerUrl || doc.detailUrl || "#";
+
+    // OSDビューアが実寸を取れるよう、非表示解除を先に行ってから画像を開く。
+    overlayEl.removeAttribute("hidden");
+    document.body.classList.add("no-scroll");
+    updateOverlayForCurrentPage();
+  }
+
+  function closeOverlay() {
+    overlayEl.setAttribute("hidden", "");
+    clearLineHighlight();
+    viewer.close();
+    document.body.classList.remove("no-scroll");
+  }
+
+  overlayCloseBtn.addEventListener("click", closeOverlay);
+  overlayEl.addEventListener("click", function (e) {
+    if (e.target === overlayEl || e.target.classList.contains("overlay-body")) {
+      closeOverlay();
+    }
+  });
+  overlayPrevBtn.addEventListener("click", function () { navigateOverlay(-1); });
+  overlayNextBtn.addEventListener("click", function () { navigateOverlay(1); });
+
+  // 画像上に重ねたコマ送りボタンなので、タップ/ドラッグ操作が OSD のパン・
+  // ダブルタップズームへ波及しないよう明示的に伝播を止めておく。
+  [overlayPrevBtn, overlayNextBtn].forEach(function (btn) {
+    ["pointerdown", "mousedown", "touchstart"].forEach(function (evtName) {
+      btn.addEventListener(evtName, function (e) { e.stopPropagation(); }, { passive: true });
+    });
+  });
+
+  osdZoomInBtn.addEventListener("click", function () {
+    viewer.viewport.zoomBy(1.4);
+    viewer.viewport.applyConstraints();
+  });
+  osdZoomOutBtn.addEventListener("click", function () {
+    viewer.viewport.zoomBy(1 / 1.4);
+    viewer.viewport.applyConstraints();
+  });
+  osdHomeBtn.addEventListener("click", function () {
+    viewer.viewport.goHome();
+  });
+
+  overlayTranscriptToggle.addEventListener("click", function () {
+    var willOpen = overlayTranscriptBody.hasAttribute("hidden");
+    if (willOpen) {
+      overlayTranscriptBody.removeAttribute("hidden");
+    } else {
+      overlayTranscriptBody.setAttribute("hidden", "");
+    }
+    overlayTranscriptToggle.setAttribute("aria-expanded", String(willOpen));
+    overlayTranscriptToggle.textContent = willOpen ? "このコマの翻刻を閉じる ▴" : "このコマの翻刻を見る ▾";
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (overlayEl.hasAttribute("hidden")) return;
+    if (e.key === "Escape") {
+      closeOverlay();
+    } else if (e.key === "ArrowLeft") {
+      navigateOverlay(-1);
+    } else if (e.key === "ArrowRight") {
+      navigateOverlay(1);
+    }
+  });
+
+  // 左右スワイプによるページ送りは OpenSeadragon 標準のドラッグ＝パン操作と競合するため廃止。
+  // ページ送りは前/次ボタンと矢印キーで行う（公式ビューアと同じ操作体系）。
+
+  // ---------- 起動 ----------
+
+  init();
+})();
+</script>
+</body>
+</html>

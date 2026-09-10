@@ -1,0 +1,17 @@
+# 中間データ（画像・OCR生出力はリポジトリに含めない）
+# ルート直下のみ。docs/data/ は公開する検索インデックスなので除外しない
+# manifest.json は dh-jac.net が自動取得を 429 で拒否することがあるためコミット対象とする
+# AI翻刻（data/*/ai/）は手作業の成果物なのでコミット対象とする
+/data/*/images/
+/data/*/ocr/
+
+# OCRエンジン（cloneで再取得可能）
+tools/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
