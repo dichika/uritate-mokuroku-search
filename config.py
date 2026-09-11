@@ -20,6 +20,9 @@ TOOLS_DIR = BASE_DIR / "tools"
 OCR_TOOL_DIR = TOOLS_DIR / "ndlocr-lite"
 OCR_PYTHON = BASE_DIR / ".venv" / "bin" / "python"
 INDEX_JSON = DOCS_DIR / "data" / "index.json"
+# 新旧字体・異体字の対応表（入力）と、検索UIが読み込む生成物
+KANJI_VARIANTS_DIR = DATA_DIR / "kanji_variants"
+KANJI_VARIANTS_JS = DOCS_DIR / "kanji-variants.js"
 
 # アーカイブ側URLパターン
 MANIFEST_URL_TMPL = "https://www.dh-jac.net/db1/books/{book_id}/portal/manifest.json"

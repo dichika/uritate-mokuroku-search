@@ -552,7 +552,7 @@
     <h1>売立目録 全文検索</h1>
     <p class="site-desc">売立目録（入札目録）の活字OCRテキストをスマートフォンから横断検索できます。</p>
     <div class="search-box">
-      <input type="search" id="searchInput" placeholder="例: 渡唐天神 山水 三十六歌仙" autocomplete="off" aria-label="検索キーワード">
+      <input type="search" id="searchInput" placeholder="例: 渡唐天神 芸阿弥 三十六歌仙" autocomplete="off" aria-label="検索キーワード">
     </div>
     <div class="result-count" id="resultCount"></div>
   </div>
@@ -601,10 +601,12 @@
   <p>本文テキストは NDLOCR-Lite による機械翻刻であり、誤読を含みます。原典の確認には必ず画像またはアーカイブ本体をご参照ください。</p>
   <p>一部ページには Claude による試験的なAI翻刻を併載している場合があります。こちらも誤読を含みます。</p>
   <p>OCR: NDLOCR-Lite（国立国会図書館, CC BY 4.0）</p>
+  <p>検索では旧字体・異体字を新字体に正規化して照合しています（例: 藝阿彌＝芸阿弥）。対応表は <a href="https://github.com/new-village/joyo-kanji" target="_blank" rel="noopener noreferrer">new-village/joyo-kanji</a>（Apache-2.0）を基に補足しています。</p>
   <p>ビューア: OpenSeadragon（BSD-3-Clause）を使用しています。</p>
 </footer>
 
 <script src="./vendor/openseadragon/openseadragon.min.js"></script>
+<script src="./kanji-variants.js"></script>
 <script>
 (function () {
   "use strict";
@@ -664,13 +666,27 @@
 
   // ---------- 正規化 ----------
 
-  function normalize(str) {
-    if (!str) return "";
-    var n = String(str).normalize("NFKC");
+  // 旧字体・異体字 → 新字体 の対応表（kanji-variants.js が定義。未読込でも動くよう空を既定にする）
+  var KANJI_VARIANTS = window.KANJI_VARIANTS || {};
+
+  // 1文字（コードポイント）を検索比較用の形へ正規化する。
+  //   1. NFKC（全角英数・互換漢字・㍿ 等）
+  //   2. カタカナ → ひらがな
+  //   3. 旧字体・異体字 → 新字体（藝→芸、彌→弥、髙→高 など）
+  //   4. 小文字化
+  // 検索語と本文の両方にこの関数を通すことで、藝阿彌 と 芸阿弥 が同一視される。
+  function normalizeChar(ch) {
+    var n = ch.normalize("NFKC");
     n = n.replace(/[ァ-ヶ]/g, function (c) {
       return String.fromCharCode(c.charCodeAt(0) - 0x60);
     });
+    n = Array.from(n).map(function (c) { return KANJI_VARIANTS[c] || c; }).join("");
     return n.toLowerCase();
+  }
+
+  function normalize(str) {
+    if (!str) return "";
+    return Array.from(String(str)).map(normalizeChar).join("");
   }
 
   function escapeHtml(s) {
@@ -686,11 +702,7 @@
     var normChars = [];
     var map = [];
     chars.forEach(function (ch, idx) {
-      var n = ch.normalize("NFKC");
-      n = n.replace(/[ァ-ヶ]/g, function (c) {
-        return String.fromCharCode(c.charCodeAt(0) - 0x60);
-      });
-      n = n.toLowerCase();
+      var n = normalizeChar(ch);
       for (var i = 0; i < n.length; i++) {
         normChars.push(n[i]);
         map.push(idx);

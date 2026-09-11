@@ -22,6 +22,7 @@ IIIF で公開する売立目録（入札目録）の画像を、活字OCRでテ
 | `pipeline/fetch.py` | IIIFマニフェスト・ページ画像の取得 |
 | `pipeline/run_ocr.py` | NDLOCR-Lite による一括OCR |
 | `pipeline/build_index.py` | 検索インデックス `docs/data/index.json` の生成 |
+| `pipeline/build_variants.py` | 新旧字体・異体字対応表 `docs/kanji-variants.js` の生成（入力は `data/kanji_variants/`） |
 | `docs/` | GitHub Pages 公開ディレクトリ（検索UI） |
 
 ## 資料の追加手順
@@ -52,6 +53,14 @@ JSON を `data/{id}/manifest.json` に保存してから `fetch.py` を再実行
 - WAF（F5 系。`TS…`/`DMZ` クッキー）がセッション初回の並列要求を落とすことがある。
   検索UIではサムネイルの `onerror` 再試行（最大3回）と OpenSeadragon の `tileRetryMax: 3` で吸収している。
 
+## 検索の正規化（旧字体・異体字）
+
+検索語と本文の両方を1文字ずつ NFKC → カタカナ→ひらがな → 旧字体・異体字→新字体 → 小文字化 の順で
+正規化して照合するため、「芸阿弥」でも「藝阿彌」でもヒットし、ハイライトは原文の字形のまま表示される。
+対応表は `data/kanji_variants/`（常用漢字表に基づく new-village/joyo-kanji の 359組＋異体字17組、
+および売立目録向けの補足 `extra.json`）から `pipeline/build_variants.py` で生成する。
+対応を追加したいときは `extra.json` に1文字→1文字で追記して再生成する。
+
 ## 初回セットアップ
 
 ```bash
@@ -70,4 +79,5 @@ python3 -m http.server 8124 --directory docs
 
 - 画像・マニフェスト: 立命館大学アート・リサーチセンター ARC書籍閲覧システム（原資料は各所蔵機関の所蔵）
 - OCR: [NDLOCR-Lite](https://github.com/ndl-lab/ndlocr-lite)（国立国会図書館, CC BY 4.0）
+- 新旧字体対応表: [new-village/joyo-kanji](https://github.com/new-village/joyo-kanji)（Apache-2.0）
 - ビューア: OpenSeadragon（BSD-3-Clause）
