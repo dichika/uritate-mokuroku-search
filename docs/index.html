@@ -103,6 +103,40 @@
     color: var(--text-dim);
     min-height: 1.1em;
   }
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 0;
+  }
+  .filter-bar[hidden] { display: none; }
+  .filter-bar select,
+  .filter-bar input[type="text"] {
+    font-size: 0.82rem;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-elev);
+    color: var(--text);
+    font-family: inherit;
+  }
+  .filter-bar select { flex: 0 0 auto; }
+  .filter-bar input[type="text"] { flex: 1 1 140px; min-width: 0; }
+  .load-more-wrap {
+    text-align: center;
+    margin: 4px 0 20px;
+  }
+  .load-more-btn {
+    font-size: 0.85rem;
+    padding: 9px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--accent);
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .load-more-btn:active { opacity: 0.7; }
   main {
     padding-top: 14px;
   }
@@ -559,6 +593,11 @@
 </header>
 
 <div class="wrap">
+  <div class="filter-bar" id="filterBar" hidden>
+    <select id="ownerFilter" aria-label="所蔵で絞り込み"><option value="">所蔵: すべて</option></select>
+    <select id="yearFilter" aria-label="刊行年で絞り込み"><option value="">刊行年: すべて</option></select>
+    <input type="text" id="titleFilter" placeholder="書名で絞り込み" aria-label="書名で絞り込み" autocomplete="off">
+  </div>
   <main id="results">
     <div class="state-msg" id="initialMsg">読み込み中…</div>
   </main>
@@ -611,10 +650,23 @@
 (function () {
   "use strict";
 
-  var allData = null;
+  // catalog.json（書誌一覧）・search.json（座標なしの軽量本文）は起動時に読み込む。
+  // 資料1冊分の全データ（座標つき、books/{id}.json）はオーバーレイ表示時に遅延取得してキャッシュする。
+  var catalogList = [];              // catalog.json の documents（前計算フィールド _normTitle 等を付与）
+  var catalogById = new Map();       // id -> catalogエントリ
+  var searchByBookId = new Map();    // id -> [{n, t, _norm}, ...]
+  var bookCache = new Map();         // id -> books/{id}.json を fetch した結果（doc）
+  var PAGE_SIZE = 50;
+  var visibleCount = PAGE_SIZE;      // 資料一覧（検索語なし）で表示中の件数
+  var filterState = { owner: "", year: "", titleNorm: "" };
+
   var resultsEl = document.getElementById("results");
   var resultCountEl = document.getElementById("resultCount");
   var searchInput = document.getElementById("searchInput");
+  var filterBarEl = document.getElementById("filterBar");
+  var ownerFilterEl = document.getElementById("ownerFilter");
+  var yearFilterEl = document.getElementById("yearFilter");
+  var titleFilterEl = document.getElementById("titleFilter");
   var overlayEl = document.getElementById("overlay");
   var osdViewerEl = document.getElementById("osdViewer");
   var overlayTitle = document.getElementById("overlayTitle");
@@ -786,33 +838,89 @@
 
   // ---------- データ読み込み・前計算 ----------
 
-  function precompute(data) {
-    (data.documents || []).forEach(function (doc) {
+  // catalog.json（書誌一覧）の前計算。検索語なしの一覧表示・絞り込み・書誌検索に使う。
+  function precomputeCatalog(data) {
+    catalogList = data.documents || [];
+    catalogList.forEach(function (doc) {
       doc._normTitle = normalize(doc.title);
       doc._normCommentary = normalize(doc.commentary);
-      (doc.pages || []).sort(function (a, b) { return (a.n || 0) - (b.n || 0); });
-      (doc.pages || []).forEach(function (page) {
-        (page.lines || []).forEach(function (line) {
-          line._norm = normalize(line.t);
-          line.type = "ocr";
-        });
-        // AI翻刻行（座標なし）。存在しないページもあるので undefined 耐性を持たせる。
-        page._aiLines = (page.ai || []).map(function (t) {
-          return { t: t, _norm: normalize(t), type: "ai" };
-        });
+      catalogById.set(doc.id, doc);
+    });
+  }
+
+  // search.json（座標なしの軽量本文）の前計算。ページ単位の全文検索に使う。
+  function precomputeSearch(data) {
+    (data.books || []).forEach(function (book) {
+      var lines = (book.p || []).map(function (pair) {
+        return { n: pair[0], t: pair[1], _norm: normalize(pair[1]) };
+      });
+      searchByBookId.set(book.id, lines);
+    });
+  }
+
+  // 資料1冊分の全データ（books/{id}.json）の前計算。座標つきなのでオーバーレイ内でのみ使う。
+  function precomputeDoc(doc) {
+    (doc.pages || []).sort(function (a, b) { return (a.n || 0) - (b.n || 0); });
+    (doc.pages || []).forEach(function (page) {
+      (page.lines || []).forEach(function (line) {
+        line._norm = normalize(line.t);
+        line.type = "ocr";
+      });
+      page._aiLines = (page.ai || []).map(function (t) {
+        return { t: t, _norm: normalize(t), type: "ai" };
       });
     });
   }
 
-  function init() {
-    fetch("./data/index.json")
+  // 資料1冊分の全データを取得する（初回のみ fetch し、以後は bookCache から返す）。
+  function getBookData(id) {
+    if (bookCache.has(id)) return Promise.resolve(bookCache.get(id));
+    return fetch("./data/books/" + encodeURIComponent(id) + ".json")
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json();
       })
-      .then(function (data) {
-        allData = data;
-        precompute(allData);
+      .then(function (doc) {
+        precomputeDoc(doc);
+        bookCache.set(id, doc);
+        return doc;
+      });
+  }
+
+  function buildFilterOptions() {
+    var owners = Array.from(new Set(catalogList.map(function (d) { return d.owner; }).filter(Boolean))).sort();
+    owners.forEach(function (owner) {
+      var opt = document.createElement("option");
+      opt.value = owner;
+      opt.textContent = owner;
+      ownerFilterEl.appendChild(opt);
+    });
+    var years = Array.from(new Set(catalogList.map(function (d) { return d.year; }).filter(Boolean)));
+    years.sort(function (a, b) { return (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0); });
+    years.forEach(function (year) {
+      var opt = document.createElement("option");
+      opt.value = year;
+      opt.textContent = year + "年";
+      yearFilterEl.appendChild(opt);
+    });
+  }
+
+  function init() {
+    Promise.all([
+      fetch("./data/catalog.json").then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status + " (catalog.json)");
+        return res.json();
+      }),
+      fetch("./data/search.json").then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status + " (search.json)");
+        return res.json();
+      }),
+    ])
+      .then(function (results) {
+        precomputeCatalog(results[0]);
+        precomputeSearch(results[1]);
+        buildFilterOptions();
+        filterBarEl.removeAttribute("hidden");
         renderDocList();
       })
       .catch(function () {
@@ -823,7 +931,7 @@
   function showError() {
     resultCountEl.textContent = "";
     resultsEl.innerHTML =
-      '<div class="state-msg error">index.json が見つかりません。<br>データファイルが未生成か、配置場所をご確認ください。</div>';
+      '<div class="state-msg error">catalog.json / search.json が見つかりません。<br>データファイルが未生成か、配置場所をご確認ください。</div>';
   }
 
   // ---------- 検索 ----------
@@ -833,37 +941,39 @@
     if (terms.length === 0) return null;
     var commentaryHits = [];
     var pageHits = [];
-    allData.documents.forEach(function (doc) {
+    catalogList.forEach(function (doc) {
       var combined = doc._normTitle + "\n" + doc._normCommentary;
       var allIn = terms.every(function (t) { return combined.indexOf(t) !== -1; });
       if (allIn) commentaryHits.push(doc);
 
-      (doc.pages || []).forEach(function (page) {
-        var hitLines = [];
-        (page.lines || []).forEach(function (line) {
-          var ok = terms.every(function (t) { return line._norm.indexOf(t) !== -1; });
-          if (ok) hitLines.push(line);
-        });
-        (page._aiLines || []).forEach(function (line) {
-          var ok = terms.every(function (t) { return line._norm.indexOf(t) !== -1; });
-          if (ok) hitLines.push(line);
-        });
-        if (hitLines.length > 0) {
-          pageHits.push({ doc: doc, page: page, hitLines: hitLines });
-        }
+      var lines = searchByBookId.get(doc.id) || [];
+      var hitsByPage = new Map();
+      lines.forEach(function (line) {
+        var ok = terms.every(function (t) { return line._norm.indexOf(t) !== -1; });
+        if (!ok) return;
+        if (!hitsByPage.has(line.n)) hitsByPage.set(line.n, []);
+        hitsByPage.get(line.n).push(line);
       });
+      hitsByPage.forEach(function (hitLines, n) {
+        pageHits.push({ doc: doc, pageN: n, hitLines: hitLines });
+      });
+    });
+    pageHits.sort(function (a, b) {
+      if (a.doc.id !== b.doc.id) return a.doc.id < b.doc.id ? -1 : 1;
+      return a.pageN - b.pageN;
     });
     return { terms: terms, commentaryHits: commentaryHits, pageHits: pageHits };
   }
 
   function handleSearch(query) {
-    if (!allData) return;
     var trimmed = query.trim();
     if (trimmed === "") {
       lastSearchTerms = [];
+      filterBarEl.removeAttribute("hidden");
       renderDocList();
       return;
     }
+    filterBarEl.setAttribute("hidden", "");
     var result = runSearch(trimmed);
     lastSearchTerms = result.terms;
     renderSearchResults(result);
@@ -876,17 +986,57 @@
     debounceTimer = setTimeout(function () { handleSearch(v); }, 300);
   });
 
+  // ---------- 絞り込み（資料一覧、検索語なしのときのみ） ----------
+
+  function matchesFilter(doc) {
+    if (filterState.owner && doc.owner !== filterState.owner) return false;
+    if (filterState.year && doc.year !== filterState.year) return false;
+    if (filterState.titleNorm && doc._normTitle.indexOf(filterState.titleNorm) === -1) return false;
+    return true;
+  }
+
+  ownerFilterEl.addEventListener("change", function () {
+    filterState.owner = ownerFilterEl.value;
+    visibleCount = PAGE_SIZE;
+    renderDocList();
+  });
+  yearFilterEl.addEventListener("change", function () {
+    filterState.year = yearFilterEl.value;
+    visibleCount = PAGE_SIZE;
+    renderDocList();
+  });
+  var titleFilterDebounce = null;
+  titleFilterEl.addEventListener("input", function () {
+    clearTimeout(titleFilterDebounce);
+    titleFilterDebounce = setTimeout(function () {
+      filterState.titleNorm = normalize(titleFilterEl.value).trim();
+      visibleCount = PAGE_SIZE;
+      renderDocList();
+    }, 200);
+  });
+
   // ---------- 表示: 資料一覧（検索語なし） ----------
 
   function renderDocList() {
-    var docs = allData.documents || [];
-    resultCountEl.textContent = docs.length + " 件の資料を収録しています";
-    if (docs.length === 0) {
+    var filtered = catalogList.filter(matchesFilter);
+    if (catalogList.length === 0) {
+      resultCountEl.textContent = "";
       resultsEl.innerHTML = '<div class="state-msg">収録された資料がありません。</div>';
       return;
     }
-    var html = docs.map(function (doc) {
-      var pageCount = (doc.pages || []).length;
+    if (filtered.length === 0) {
+      resultCountEl.textContent = "0 件（全" + catalogList.length + "件中）";
+      resultsEl.innerHTML = '<div class="state-msg">条件に合う資料が見つかりませんでした。</div>';
+      return;
+    }
+    resultCountEl.textContent =
+      filtered.length === catalogList.length
+        ? filtered.length + " 件の資料を収録しています"
+        : filtered.length + " 件（全" + catalogList.length + "件中）";
+
+    var shown = filtered.slice(0, visibleCount);
+    var html = shown.map(function (doc) {
+      var pageCount = doc.pages || 0; // catalog.json ではコマ数（整数）
       var excerpt = (doc.commentary || "").slice(0, 100);
       var more = (doc.commentary || "").length > 100 ? "…" : "";
       return (
@@ -905,6 +1055,11 @@
         "</div>"
       );
     }).join("");
+    if (filtered.length > shown.length) {
+      html +=
+        '<div class="load-more-wrap"><button type="button" id="loadMoreBtn" class="load-more-btn">' +
+        "さらに表示（残り" + (filtered.length - shown.length) + "件）</button></div>";
+    }
     resultsEl.innerHTML = html;
   }
 
@@ -941,31 +1096,29 @@
 
     pageHits.forEach(function (hit, hitIdx) {
       var doc = hit.doc;
-      var page = hit.page;
+      var pageN = hit.pageN;
       var lines = hit.hitLines;
       var shown = lines.slice(0, 5);
       var restCount = lines.length - shown.length;
 
+      // search.json は座標なしの軽量データのため OCR/AI の区別を持たない。
+      // 区別が必要な翻刻全文はオーバーレイ（books/{id}.json 取得後）側で表示する。
       var linesHtml = shown.map(function (line) {
-        var isAi = line.type === "ai";
-        var badgeHtml = '<span class="line-badge' + (isAi ? " line-badge-ai" : "") + '">' +
-          (isAi ? "AI翻刻" : "OCR") + "</span>";
         // 行タップ・専用ボタンのどちらでも同じページの全画面オーバーレイを開く。
         return (
           '<li data-hit-line="1">' +
-          '<span class="line-text">' + badgeHtml + highlightHTML(line.t || "", terms) + "</span>" +
+          '<span class="line-text">' + highlightHTML(line.t || "", terms) + "</span>" +
           '<button type="button" class="line-open-btn">このページの画像を見る</button>' +
           "</li>"
         );
       }).join("") + (restCount > 0 ? '<li class="more-lines">他' + restCount + "行</li>" : "");
 
       html +=
-        '<div class="card page-card" data-doc-idx="' + escapeHtml(String(doc.id)) + '" data-page-n="' + escapeHtml(String(page.n)) + '">' +
+        '<div class="card page-card" data-doc-idx="' + escapeHtml(String(doc.id)) + '" data-page-n="' + escapeHtml(String(pageN)) + '">' +
         '<div class="page-card-head">' +
-        '<img class="thumb" loading="lazy" alt="' + escapeHtml(doc.title || "") + " " + escapeHtml(String(page.n)) + 'コマ目のサムネイル" src="' + escapeHtml(page.iiif) + 'full/400,/0/default.jpg" data-thumb-open="1">' +
         '<div class="page-card-info">' +
         '<div class="doc-title">' + escapeHtml(doc.title || "") + "</div>" +
-        '<div class="page-num">' + escapeHtml(String(page.n)) + " コマ目</div>" +
+        '<div class="page-num">' + escapeHtml(String(pageN)) + " コマ目</div>" +
         "</div>" +
         "</div>" +
         '<ul class="lines" data-hit-idx="' + hitIdx + '">' + linesHtml + "</ul>" +
@@ -973,46 +1126,30 @@
     });
 
     resultsEl.innerHTML = html;
-
-    // オーバーレイのページ送りに使う参照を保持
-    resultsEl.__pageHits = pageHits;
   }
 
   // イベント委譲: 結果一覧内のクリックを処理
-  // サムネイル・行テキスト・専用ボタンのいずれをタップしても、そのカードのページの
+  // 行テキスト・専用ボタンのいずれをタップしても、そのカードのページの
   // 全画面オーバーレイを開く（行は同一ページ内のヒットなのでカード単位で開けば足りる）。
-  // サムネイル読み込み失敗時の再試行（画像サーバの WAF が初回要求を落とすことがあるため）
-  resultsEl.addEventListener("error", function (e) {
-    var img = e.target;
-    if (!img || img.tagName !== "IMG" || !img.classList.contains("thumb")) return;
-    var tries = Number(img.getAttribute("data-retry") || "0");
-    if (tries >= 3) return;
-    img.setAttribute("data-retry", String(tries + 1));
-    var src = img.getAttribute("data-src") || img.src;
-    img.setAttribute("data-src", src);
-    setTimeout(function () {
-      img.src = src + (src.indexOf("?") === -1 ? "?" : "&") + "retry=" + (tries + 1);
-    }, 1500 * (tries + 1));
-  }, true);
-
   resultsEl.addEventListener("click", function (e) {
+    var loadMoreBtn = e.target.closest("#loadMoreBtn");
+    if (loadMoreBtn) {
+      visibleCount += PAGE_SIZE;
+      renderDocList();
+      return;
+    }
     var card = e.target.closest(".page-card");
     if (!card) return;
-    var trigger = e.target.closest("[data-thumb-open], .line-open-btn, li[data-hit-line]");
+    var trigger = e.target.closest(".line-open-btn, li[data-hit-line]");
     if (trigger) {
       openOverlayFromCard(card);
     }
   });
 
   function openOverlayFromCard(card) {
-    if (!card || !resultsEl.__pageHits) return;
     var docId = card.getAttribute("data-doc-idx");
-    var pageN = card.getAttribute("data-page-n");
-    var hit = resultsEl.__pageHits.find(function (h) {
-      return String(h.doc.id) === docId && String(h.page.n) === pageN;
-    });
-    if (!hit) return;
-    openOverlay(hit.doc, hit.page);
+    var pageN = Number(card.getAttribute("data-page-n"));
+    openOverlayFor(docId, pageN, lastSearchTerms);
   }
 
   // ---------- 全画面オーバーレイ ----------
@@ -1115,26 +1252,51 @@
     updateOverlayForCurrentPage();
   }
 
-  function openOverlay(doc, page) {
-    var pages = doc.pages || [];
-    var idx = pages.indexOf(page);
-    overlayState.doc = doc;
-    overlayState.pages = pages;
-    overlayState.index = idx === -1 ? 0 : idx;
-    overlayState.terms = lastSearchTerms;
+  // 資料1冊分の全データ（books/{id}.json）を取得してからオーバーレイを開く。
+  // データがまだキャッシュされていない場合は取得中の状態を表示する。
+  function openOverlayFor(docId, pageN, terms) {
+    overlayState.doc = null;
+    overlayState.pages = null;
+    overlayState.index = -1;
+    overlayState.terms = terms || [];
 
     // 翻刻セクションは開くたびに初期状態（閉）へ戻す。ページ送り中は維持する。
     overlayTranscriptBody.setAttribute("hidden", "");
     overlayTranscriptToggle.setAttribute("aria-expanded", "false");
     overlayTranscriptToggle.textContent = "このコマの翻刻を見る ▾";
+    overlayTranscriptBody.innerHTML = "";
 
-    overlayTitle.textContent = doc.title || "";
-    overlayViewerLink.href = doc.viewerUrl || doc.detailUrl || "#";
+    overlayTitle.textContent = "読み込み中…";
+    overlayViewerLink.href = "#";
+    overlayPageIndicator.textContent = "";
+    overlayPrevBtn.disabled = true;
+    overlayNextBtn.disabled = true;
 
     // OSDビューアが実寸を取れるよう、非表示解除を先に行ってから画像を開く。
     overlayEl.removeAttribute("hidden");
     document.body.classList.add("no-scroll");
-    updateOverlayForCurrentPage();
+    overlaySpinner.removeAttribute("hidden");
+
+    getBookData(docId)
+      .then(function (doc) {
+        var pages = doc.pages || [];
+        var idx = pages.findIndex(function (p) { return p.n === pageN; });
+        overlayState.doc = doc;
+        overlayState.pages = pages;
+        overlayState.index = idx === -1 ? 0 : idx;
+
+        overlayTitle.textContent = doc.title || "";
+        overlayViewerLink.href = doc.viewerUrl || doc.detailUrl || "#";
+        updateOverlayForCurrentPage();
+      })
+      .catch(function () {
+        overlaySpinner.setAttribute("hidden", "");
+        overlayTitle.textContent = "読み込みに失敗しました";
+        overlayTranscriptBody.removeAttribute("hidden");
+        overlayTranscriptToggle.setAttribute("aria-expanded", "true");
+        overlayTranscriptBody.innerHTML =
+          '<div class="transcript-empty">資料データの取得に失敗しました。しばらくしてから再度お試しください。</div>';
+      });
   }
 
   function closeOverlay() {

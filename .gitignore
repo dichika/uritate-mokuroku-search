@@ -8,6 +8,9 @@
 # OCRエンジン（cloneで再取得可能）
 tools/
 
+# 日次運用のログ・ロックファイル（生成物）
+/logs/
+
 # Python
 .venv/
 __pycache__/

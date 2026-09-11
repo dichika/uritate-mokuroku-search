@@ -46,7 +46,7 @@ def run_ocr(book_id: str) -> None:
 
 
 def main() -> None:
-    for book_id in config.BOOK_IDS:
+    for book_id in config.done_book_ids():
         run_ocr(book_id)
 
 

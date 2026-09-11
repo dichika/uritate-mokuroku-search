@@ -1,31 +1,22 @@
-"""OCR結果とマニフェストのメタデータから検索インデックス docs/data/index.json を生成する。
+"""OCR結果とマニフェストのメタデータから検索インデックスを生成する。
 
 使い方:
     python3 pipeline/build_index.py
 
-インデックス構造:
-{
-  "documents": [
-    {
-      "id": "UCB-N7352-B558-0146",
-      "title": "...", "titleReading": "...", "year": "1917", "yearJa": "大正０６",
-      "genre": "...", "owner": "...", "code": "...",
-      "commentary": "...",       # 資料単位の検索対象（マニフェストの description 等）
-      "viewerUrl": "...", "detailUrl": "...",
-      "pages": [
-        {
-          "n": 1,                # コマ番号（マニフェストのcanvas順）
-          "label": "p.1",        # マニフェスト上のラベル
-          "name": "UCB-N7352-B558-0146_001",
-          "iiif": "https://.../iiif/berkeley%21ac%21...%21UCB-N7352-B558-0146_001/",  # IIIF service base
-          "w": 2700, "h": 2107,
-          "lines": [ {"t": "行テキスト", "b": [x, y, w, h], "c": 0.51}, ... ],
-          "ai": ["AI翻刻行", ...]   # data/{id}/ai/{name}.txt があるページのみ
-        }, ...
-      ]
-    }
-  ]
-}
+320件規模の資料を扱うため、インデックスは3種類に分割して生成する
+（単一ファイルのままではスマホの初回読み込みに耐えないため。作業設計書 §1.3）。
+
+- docs/data/catalog.json: 全冊の書誌一覧（起動時に読む）。
+    {"documents": [{id, title, titleReading, year, yearJa, genre, owner, code,
+                     commentary, pages, viewerUrl, detailUrl}, ...]}
+    "pages" はコマ数（整数）である。
+- docs/data/search.json: 全冊の本文（起動時に読む。座標は含めない軽量版）。
+    {"books": [{"id": "...", "p": [[コマ番号, "行テキスト"], ...]}, ...]}
+    OCR行・AI翻刻行の両方を含む（表示上の区別は行わない。区別が必要な場合は
+    オーバーレイ表示時に取得する books/{book_id}.json 側の情報を使う）。
+- docs/data/books/{book_id}.json: 資料1冊分の全データ（座標・OCR/AI区別つき）。
+    { id, title, ..., pages: [{n, label, name, iiif, w, h, lines: [...], ai: [...]}, ...] }
+    docs/index.html がオーバーレイ表示時に遅延取得してキャッシュする。
 """
 
 import json
@@ -105,6 +96,7 @@ def first(md: dict, label: str, idx: int = 0) -> str | None:
 
 
 def build_document(book_id: str) -> dict:
+    """資料1冊分の全データ（books/{book_id}.json の内容）を組み立てる。"""
     bdir = config.book_dir(book_id)
     manifest = json.loads((bdir / "manifest.json").read_text(encoding="utf-8"))
     md = metadata_map(manifest)
@@ -159,17 +151,68 @@ def build_document(book_id: str) -> dict:
     }
 
 
+def catalog_entry(doc: dict) -> dict:
+    """docs/data/catalog.json 用に、書誌情報だけを抜き出す（pagesはコマ数に圧縮）。"""
+    return {
+        "id": doc["id"],
+        "title": doc["title"],
+        "titleReading": doc["titleReading"],
+        "year": doc["year"],
+        "yearJa": doc["yearJa"],
+        "genre": doc["genre"],
+        "owner": doc["owner"],
+        "code": doc["code"],
+        "commentary": doc["commentary"],
+        "pages": len(doc["pages"]),
+        "viewerUrl": doc["viewerUrl"],
+        "detailUrl": doc["detailUrl"],
+    }
+
+
+def search_entry(doc: dict) -> dict:
+    """docs/data/search.json 用に、本文だけを軽量な形（座標なし）で抜き出す。"""
+    p: list[list] = []
+    for page in doc["pages"]:
+        for line in page["lines"]:
+            p.append([page["n"], line["t"]])
+        for text in page.get("ai", []):
+            p.append([page["n"], text])
+    return {"id": doc["id"], "p": p}
+
+
 def main() -> None:
-    documents = [build_document(book_id) for book_id in config.BOOK_IDS]
-    config.INDEX_JSON.parent.mkdir(parents=True, exist_ok=True)
-    config.INDEX_JSON.write_text(
-        json.dumps({"documents": documents}, ensure_ascii=False, separators=(",", ":")),
-        encoding="utf-8",
+    book_ids = config.done_book_ids()
+    documents = [build_document(book_id) for book_id in book_ids]
+
+    config.DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    config.BOOKS_DIR.mkdir(parents=True, exist_ok=True)
+
+    catalog = {"documents": [catalog_entry(d) for d in documents]}
+    config.CATALOG_JSON.write_text(
+        json.dumps(catalog, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
+
+    search = {"books": [search_entry(d) for d in documents]}
+    config.SEARCH_JSON.write_text(
+        json.dumps(search, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+    )
+
+    # 既存キューの book_id 一覧に無くなった資料の books/*.json は残置してもUIから参照されないだけで
+    # 実害はないため、削除は行わない（誤って全消去する事故を避ける）。
+    for doc in documents:
+        (config.BOOKS_DIR / f"{doc['id']}.json").write_text(
+            json.dumps(doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+        )
+
     n_pages = sum(len(d["pages"]) for d in documents)
-    n_lines = sum(len(p["lines"]) for d in documents for p in d["pages"])
-    size_kb = config.INDEX_JSON.stat().st_size // 1024
-    print(f"index.json 生成: 資料{len(documents)}点 / {n_pages}ページ / {n_lines}行 / {size_kb} KB")
+    n_lines = sum(len(p["lines"]) + len(p.get("ai", [])) for d in documents for p in d["pages"])
+    catalog_kb = config.CATALOG_JSON.stat().st_size // 1024
+    search_kb = config.SEARCH_JSON.stat().st_size // 1024
+    print(
+        f"インデックス生成: 資料{len(documents)}点 / {n_pages}ページ / {n_lines}行 / "
+        f"catalog.json {catalog_kb}KB / search.json {search_kb}KB / "
+        f"books/*.json {len(documents)}冊分"
+    )
 
 
 if __name__ == "__main__":
