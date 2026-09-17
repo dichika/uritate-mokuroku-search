@@ -8,8 +8,8 @@
   "access": "カリフォルニア大学バークレー校C. V. スター東アジア図書館",
   "temporal": "1914年",
   "provider": "arc",
-  "status": "error",
-  "note": "画像取得失敗: <HTTPError 403: 'Forbidden'>",
+  "status": "pending",
+  "note": "2026-09-17 遮断解除後に再試行するため pending に戻した",
   "updated": "2026-09-11"
  },
  {
@@ -21,8 +21,8 @@
   "access": "カリフォルニア大学バークレー校C. V. スター東アジア図書館",
   "temporal": "1917年",
   "provider": "arc",
-  "status": "error",
-  "note": "画像取得失敗: <HTTPError 403: 'Forbidden'>",
+  "status": "pending",
+  "note": "2026-09-17 遮断解除後に再試行するため pending に戻した",
   "updated": "2026-09-11"
  },
  {

@@ -58,7 +58,7 @@ IIIF_FULL_IMAGE_TMPL = "{base}full/full/0/default.jpg"
 IIIF_THUMB_TMPL = "{base}full/400,/0/default.jpg"
 
 # サーバーへの配慮
-REQUEST_WAIT_SEC = 1.5
+REQUEST_WAIT_SEC = 5.0  # 2026-09-11 に1.5秒間隔の一括取得後に約6日間IP遮断されたため広げた
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/128.0 Safari/537.36 uritate-mokuroku-search/0.1"
