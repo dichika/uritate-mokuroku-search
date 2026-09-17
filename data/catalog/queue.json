@@ -8,9 +8,9 @@
   "access": "カリフォルニア大学バークレー校C. V. スター東アジア図書館",
   "temporal": "1914年",
   "provider": "arc",
-  "status": "pending",
-  "note": "2026-09-17 遮断解除後に再試行するため pending に戻した",
-  "updated": "2026-09-11"
+  "status": "done",
+  "note": "",
+  "updated": "2026-09-17"
  },
  {
   "id": "arc_books-UCB_N7352_B558_0120",
@@ -21,9 +21,9 @@
   "access": "カリフォルニア大学バークレー校C. V. スター東アジア図書館",
   "temporal": "1917年",
   "provider": "arc",
-  "status": "pending",
-  "note": "2026-09-17 遮断解除後に再試行するため pending に戻した",
-  "updated": "2026-09-11"
+  "status": "done",
+  "note": "",
+  "updated": "2026-09-17"
  },
  {
   "id": "arc_books-UCB_N7352_B558_0035",
