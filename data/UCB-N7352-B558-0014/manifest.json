@@ -1,0 +1,988 @@
+{
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@type": "sc:Manifest",
+    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/manifest.json",
+    "metadata": [
+        {
+            "label": "Persistent ID",
+            "value": "info:dhjac/pid/UCB-N7352-B558-0014"
+        },
+        {
+            "label": "Title",
+            "value": [
+                {
+                    "@value": "某旧家所蔵品入札",
+                    "@language": "ja"
+                }
+            ]
+        },
+        {
+            "label": "Publication Date",
+            "value": [
+                {
+                    "@value": "1913",
+                    "@language": "en"
+                },
+                {
+                    "@value": "大正０２",
+                    "@language": "ja"
+                }
+            ]
+        },
+        {
+            "label": "Call Number",
+            "value": "UCB-N7352-B558-0014"
+        },
+        {
+            "label": "URL",
+            "value": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/"
+        },
+        {
+            "label": "Title (reading)",
+            "value": "ぼうきゅうかしょぞうひんにゅうさつ"
+        },
+        {
+            "label": "Title (romaji)",
+            "value": "boukyūkashozouhinnyūsatsu"
+        },
+        {
+            "label": "Genre",
+            "value": "入札目録、売立目録"
+        },
+        {
+            "label": "Owner",
+            "value": "UC Berkeley East Asian Library"
+        }
+    ],
+    "label": "某旧家所蔵品入札",
+    "description": "UCB-N7352-B558-0014, 某旧家所蔵品入札, ぼうきゅうかしょぞうひんにゅうさつ, ",
+    "license": "http://www.lib.berkeley.edu/",
+    "attribution": "UC Berkeley East Asian Library",
+    "logo": "https://www.arc.ritsumei.ac.jp/image/logo_small.png",
+    "sequences": [
+        {
+            "@type": "sc:Sequence",
+            "viewingHint": "individuals",
+            "canvases": [
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/1",
+                    "@type": "sc:Canvas",
+                    "label": "p.1",
+                    "width": 2700,
+                    "height": 2097,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_001.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 186
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/1",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/1",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_001/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2097,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_001",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/2",
+                    "@type": "sc:Canvas",
+                    "label": "p.2",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_002.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/2",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/2",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_002/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_002",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/3",
+                    "@type": "sc:Canvas",
+                    "label": "p.3",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_003.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/3",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/3",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_003/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_003",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/4",
+                    "@type": "sc:Canvas",
+                    "label": "p.4",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_004.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/4",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/4",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_004/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_004",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/5",
+                    "@type": "sc:Canvas",
+                    "label": "p.5",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_005.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/5",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/5",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_005/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_005",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/6",
+                    "@type": "sc:Canvas",
+                    "label": "p.6",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_006.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/6",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/6",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_006/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_006",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/7",
+                    "@type": "sc:Canvas",
+                    "label": "p.7",
+                    "width": 2155,
+                    "height": 2700,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_007.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 192,
+                        "height": 240
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/7",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/7",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_007/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2155,
+                                "height": 2700,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_007",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/8",
+                    "@type": "sc:Canvas",
+                    "label": "p.8",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_008.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/8",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/8",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_008/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_008",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/9",
+                    "@type": "sc:Canvas",
+                    "label": "p.9",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_009.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/9",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/9",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_009/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_009",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/10",
+                    "@type": "sc:Canvas",
+                    "label": "p.10",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_010.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/10",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/10",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_010/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_010",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/11",
+                    "@type": "sc:Canvas",
+                    "label": "p.11",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_011.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/11",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/11",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_011/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_011",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/12",
+                    "@type": "sc:Canvas",
+                    "label": "p.12",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_012.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/12",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/12",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_012/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_012",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/13",
+                    "@type": "sc:Canvas",
+                    "label": "p.13",
+                    "width": 2700,
+                    "height": 2155,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_013.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/13",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/13",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_013/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2155,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_013",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/14",
+                    "@type": "sc:Canvas",
+                    "label": "p.14",
+                    "width": 2700,
+                    "height": 2144,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_014.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 191
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/14",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/14",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_014/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2144,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_014",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/15",
+                    "@type": "sc:Canvas",
+                    "label": "p.15",
+                    "width": 2700,
+                    "height": 2132,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_015.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/15",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/15",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_015/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2132,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_015",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/16",
+                    "@type": "sc:Canvas",
+                    "label": "p.16",
+                    "width": 2700,
+                    "height": 2132,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_016.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/16",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/16",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_016/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2132,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_016",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/17",
+                    "@type": "sc:Canvas",
+                    "label": "p.17",
+                    "width": 2700,
+                    "height": 2121,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_017.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/17",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/17",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_017/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2121,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_017",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/18",
+                    "@type": "sc:Canvas",
+                    "label": "p.18",
+                    "width": 2700,
+                    "height": 2134,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_018.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/18",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/18",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_018/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2134,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_018",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/19",
+                    "@type": "sc:Canvas",
+                    "label": "p.19",
+                    "width": 2700,
+                    "height": 2132,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_019.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/19",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/19",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_019/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2132,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_019",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/20",
+                    "@type": "sc:Canvas",
+                    "label": "p.20",
+                    "width": 2700,
+                    "height": 2115,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_020.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 188
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/20",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/20",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_020/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2115,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_020",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/21",
+                    "@type": "sc:Canvas",
+                    "label": "p.21",
+                    "width": 2700,
+                    "height": 2121,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_021.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/21",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/21",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_021/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2121,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_021",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/22",
+                    "@type": "sc:Canvas",
+                    "label": "p.22",
+                    "width": 2700,
+                    "height": 2121,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_022.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/22",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/22",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_022/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2121,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_022",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/23",
+                    "@type": "sc:Canvas",
+                    "label": "p.23",
+                    "width": 2700,
+                    "height": 2121,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_023.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/23",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/23",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_023/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2121,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_023",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/24",
+                    "@type": "sc:Canvas",
+                    "label": "p.24",
+                    "width": 2700,
+                    "height": 2121,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_024.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/24",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/24",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_024/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2121,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_024",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/25",
+                    "@type": "sc:Canvas",
+                    "label": "p.25",
+                    "width": 2700,
+                    "height": 2121,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_025.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/25",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/25",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_025/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2121,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_025",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/26",
+                    "@type": "sc:Canvas",
+                    "label": "p.26",
+                    "width": 2700,
+                    "height": 2121,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_026.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/26",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/26",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_026/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2121,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_026",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/27",
+                    "@type": "sc:Canvas",
+                    "label": "p.27",
+                    "width": 2700,
+                    "height": 2144,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/berkeley/ac/N7352-B558-0014/UCB-N7352-B558-0014_027.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 191
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/annotation/27",
+                            "on": "https://www.dh-jac.net/db1/books/UCB-N7352-B558-0014/portal/canvas/27",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_027/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2144,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/berkeley%21ac%21N7352-B558-0014%21UCB-N7352-B558-0014_027",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
