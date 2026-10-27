@@ -1,0 +1,2310 @@
+{
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@type": "sc:Manifest",
+    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/manifest.json",
+    "metadata": [
+        {
+            "label": "Persistent ID",
+            "value": "info:dhjac/pid/SISJAC-AC-108-"
+        },
+        {
+            "label": "Title",
+            "value": [
+                {
+                    "@value": "当市閑雅庵氏蔵品入札",
+                    "@language": "ja"
+                }
+            ]
+        },
+        {
+            "label": "Authors",
+            "value": [
+                {
+                    "@value": "東京美術俱楽部",
+                    "@language": "ja"
+                }
+            ]
+        },
+        {
+            "label": "Call Number",
+            "value": "SISJAC-AC-108-"
+        },
+        {
+            "label": "URL",
+            "value": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/"
+        },
+        {
+            "label": "Title (reading)",
+            "value": "とうしかんがあんしぞうひんにゅうさつ"
+        },
+        {
+            "label": "Title (romaji)",
+            "value": "toushikangaanshizouhinnyūsatsu"
+        },
+        {
+            "label": "Genre",
+            "value": "入札目録、売立目録"
+        },
+        {
+            "label": "Owner",
+            "value": "SISJAC"
+        }
+    ],
+    "label": "当市閑雅庵氏蔵品入札",
+    "description": "SISJAC-AC-108-, 当市閑雅庵氏蔵品入札, とうしかんがあんしぞうひんにゅうさつ, 東京美術俱楽部",
+    "license": "https://www.sainsbury-institute.org/library",
+    "attribution": "SISJAC",
+    "logo": "https://www.arc.ritsumei.ac.jp/image/logo_small.png",
+    "sequences": [
+        {
+            "@type": "sc:Sequence",
+            "viewingHint": "individuals",
+            "canvases": [
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/1",
+                    "@type": "sc:Canvas",
+                    "label": "p.1",
+                    "width": 2700,
+                    "height": 2119,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_001.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 188
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/1",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/1",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_001/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2119,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_001",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/2",
+                    "@type": "sc:Canvas",
+                    "label": "p.2",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_002.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/2",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/2",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_002/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_002",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/3",
+                    "@type": "sc:Canvas",
+                    "label": "p.3",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_003.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/3",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/3",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_003/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_003",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/4",
+                    "@type": "sc:Canvas",
+                    "label": "p.4",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_004.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/4",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/4",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_004/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_004",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/5",
+                    "@type": "sc:Canvas",
+                    "label": "p.5",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_005.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/5",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/5",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_005/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_005",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/6",
+                    "@type": "sc:Canvas",
+                    "label": "p.6",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_006.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/6",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/6",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_006/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_006",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/7",
+                    "@type": "sc:Canvas",
+                    "label": "p.7",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_007.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/7",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/7",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_007/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_007",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/8",
+                    "@type": "sc:Canvas",
+                    "label": "p.8",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_008.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/8",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/8",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_008/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_008",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/9",
+                    "@type": "sc:Canvas",
+                    "label": "p.9",
+                    "width": 2700,
+                    "height": 1956,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_009.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 174
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/9",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/9",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_009/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 1956,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_009",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/10",
+                    "@type": "sc:Canvas",
+                    "label": "p.10",
+                    "width": 2700,
+                    "height": 1508,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_010.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 134
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/10",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/10",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_010/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 1508,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_010",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/11",
+                    "@type": "sc:Canvas",
+                    "label": "p.11",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_011.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/11",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/11",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_011/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_011",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/12",
+                    "@type": "sc:Canvas",
+                    "label": "p.12",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_012.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/12",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/12",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_012/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_012",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/13",
+                    "@type": "sc:Canvas",
+                    "label": "p.13",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_013.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/13",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/13",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_013/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_013",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/14",
+                    "@type": "sc:Canvas",
+                    "label": "p.14",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_014.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/14",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/14",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_014/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_014",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/15",
+                    "@type": "sc:Canvas",
+                    "label": "p.15",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_015.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/15",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/15",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_015/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_015",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/16",
+                    "@type": "sc:Canvas",
+                    "label": "p.16",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_016.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/16",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/16",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_016/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_016",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/17",
+                    "@type": "sc:Canvas",
+                    "label": "p.17",
+                    "width": 2700,
+                    "height": 1974,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_017.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 175
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/17",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/17",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_017/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 1974,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_017",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/18",
+                    "@type": "sc:Canvas",
+                    "label": "p.18",
+                    "width": 2700,
+                    "height": 1506,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_018.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 134
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/18",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/18",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_018/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 1506,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_018",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/19",
+                    "@type": "sc:Canvas",
+                    "label": "p.19",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_019.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/19",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/19",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_019/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_019",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/20",
+                    "@type": "sc:Canvas",
+                    "label": "p.20",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_020.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/20",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/20",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_020/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_020",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/21",
+                    "@type": "sc:Canvas",
+                    "label": "p.21",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_021.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/21",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/21",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_021/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_021",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/22",
+                    "@type": "sc:Canvas",
+                    "label": "p.22",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_022.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/22",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/22",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_022/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_022",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/23",
+                    "@type": "sc:Canvas",
+                    "label": "p.23",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_023.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/23",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/23",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_023/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_023",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/24",
+                    "@type": "sc:Canvas",
+                    "label": "p.24",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_024.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/24",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/24",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_024/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_024",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/25",
+                    "@type": "sc:Canvas",
+                    "label": "p.25",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_025.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/25",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/25",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_025/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_025",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/26",
+                    "@type": "sc:Canvas",
+                    "label": "p.26",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_026.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/26",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/26",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_026/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_026",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/27",
+                    "@type": "sc:Canvas",
+                    "label": "p.27",
+                    "width": 2700,
+                    "height": 2159,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_027.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 192
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/27",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/27",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_027/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2159,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_027",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/28",
+                    "@type": "sc:Canvas",
+                    "label": "p.28",
+                    "width": 2700,
+                    "height": 1968,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_028.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 175
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/28",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/28",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_028/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 1968,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_028",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/29",
+                    "@type": "sc:Canvas",
+                    "label": "p.29",
+                    "width": 2700,
+                    "height": 1508,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_029.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 134
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/29",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/29",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_029/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 1508,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_029",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/30",
+                    "@type": "sc:Canvas",
+                    "label": "p.30",
+                    "width": 2700,
+                    "height": 2139,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_030.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/30",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/30",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_030/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2139,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_030",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/31",
+                    "@type": "sc:Canvas",
+                    "label": "p.31",
+                    "width": 2700,
+                    "height": 2139,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_031.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/31",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/31",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_031/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2139,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_031",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/32",
+                    "@type": "sc:Canvas",
+                    "label": "p.32",
+                    "width": 2700,
+                    "height": 2139,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_032.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/32",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/32",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_032/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2139,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_032",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/33",
+                    "@type": "sc:Canvas",
+                    "label": "p.33",
+                    "width": 2700,
+                    "height": 2139,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_033.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/33",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/33",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_033/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2139,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_033",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/34",
+                    "@type": "sc:Canvas",
+                    "label": "p.34",
+                    "width": 2700,
+                    "height": 2139,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_034.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/34",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/34",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_034/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2139,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_034",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/35",
+                    "@type": "sc:Canvas",
+                    "label": "p.35",
+                    "width": 2700,
+                    "height": 2139,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_035.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/35",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/35",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_035/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2139,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_035",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/36",
+                    "@type": "sc:Canvas",
+                    "label": "p.36",
+                    "width": 2700,
+                    "height": 2139,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_036.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/36",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/36",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_036/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2139,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_036",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/37",
+                    "@type": "sc:Canvas",
+                    "label": "p.37",
+                    "width": 2700,
+                    "height": 2124,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_037.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/37",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/37",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_037/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2124,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_037",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/38",
+                    "@type": "sc:Canvas",
+                    "label": "p.38",
+                    "width": 2700,
+                    "height": 2134,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_038.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 190
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/38",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/38",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_038/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2134,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_038",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/39",
+                    "@type": "sc:Canvas",
+                    "label": "p.39",
+                    "width": 2700,
+                    "height": 2114,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_039.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 188
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/39",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/39",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_039/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2114,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_039",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/40",
+                    "@type": "sc:Canvas",
+                    "label": "p.40",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_040.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/40",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/40",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_040/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_040",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/41",
+                    "@type": "sc:Canvas",
+                    "label": "p.41",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_041.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/41",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/41",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_041/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_041",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/42",
+                    "@type": "sc:Canvas",
+                    "label": "p.42",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_042.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/42",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/42",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_042/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_042",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/43",
+                    "@type": "sc:Canvas",
+                    "label": "p.43",
+                    "width": 2700,
+                    "height": 2017,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_043.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 179
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/43",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/43",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_043/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2017,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_043",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/44",
+                    "@type": "sc:Canvas",
+                    "label": "p.44",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_044.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/44",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/44",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_044/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_044",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/45",
+                    "@type": "sc:Canvas",
+                    "label": "p.45",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_045.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/45",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/45",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_045/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_045",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/46",
+                    "@type": "sc:Canvas",
+                    "label": "p.46",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_046.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/46",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/46",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_046/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_046",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/47",
+                    "@type": "sc:Canvas",
+                    "label": "p.47",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_047.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/47",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/47",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_047/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_047",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/48",
+                    "@type": "sc:Canvas",
+                    "label": "p.48",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_048.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/48",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/48",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_048/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_048",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/49",
+                    "@type": "sc:Canvas",
+                    "label": "p.49",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_049.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/49",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/49",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_049/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_049",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/50",
+                    "@type": "sc:Canvas",
+                    "label": "p.50",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_050.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/50",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/50",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_050/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_050",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/51",
+                    "@type": "sc:Canvas",
+                    "label": "p.51",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_051.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/51",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/51",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_051/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_051",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/52",
+                    "@type": "sc:Canvas",
+                    "label": "p.52",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_052.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/52",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/52",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_052/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_052",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/53",
+                    "@type": "sc:Canvas",
+                    "label": "p.53",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_053.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/53",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/53",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_053/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_053",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/54",
+                    "@type": "sc:Canvas",
+                    "label": "p.54",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_054.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/54",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/54",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_054/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_054",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/55",
+                    "@type": "sc:Canvas",
+                    "label": "p.55",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_055.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/55",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/55",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_055/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_055",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/56",
+                    "@type": "sc:Canvas",
+                    "label": "p.56",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_056.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/56",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/56",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_056/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_056",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/57",
+                    "@type": "sc:Canvas",
+                    "label": "p.57",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_057.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/57",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/57",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_057/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_057",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/58",
+                    "@type": "sc:Canvas",
+                    "label": "p.58",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_058.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/58",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/58",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_058/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_058",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/59",
+                    "@type": "sc:Canvas",
+                    "label": "p.59",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_059.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/59",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/59",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_059/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_059",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/60",
+                    "@type": "sc:Canvas",
+                    "label": "p.60",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_060.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/60",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/60",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_060/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_060",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/61",
+                    "@type": "sc:Canvas",
+                    "label": "p.61",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_061.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/61",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/61",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_061/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_061",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/62",
+                    "@type": "sc:Canvas",
+                    "label": "p.62",
+                    "width": 2700,
+                    "height": 2123,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_062.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 240,
+                        "height": 189
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/62",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/62",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_062/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 2700,
+                                "height": 2123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_062",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/63",
+                    "@type": "sc:Canvas",
+                    "label": "p.63",
+                    "width": 1874,
+                    "height": 2700,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_063.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 167,
+                        "height": 240
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/63",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/63",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_063/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 1874,
+                                "height": 2700,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_063",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/64",
+                    "@type": "sc:Canvas",
+                    "label": "p.64",
+                    "width": 1856,
+                    "height": 2700,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_064.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 165,
+                        "height": 240
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/64",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/64",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_064/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 1856,
+                                "height": 2700,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_064",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/65",
+                    "@type": "sc:Canvas",
+                    "label": "p.65",
+                    "width": 1854,
+                    "height": 2700,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_065.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 165,
+                        "height": 240
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/65",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/65",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_065/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 1854,
+                                "height": 2700,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_065",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/66",
+                    "@type": "sc:Canvas",
+                    "label": "p.66",
+                    "width": 1878,
+                    "height": 2700,
+                    "thumbnail": {
+                        "@id": "https://www.arc.ritsumei.ac.jp/archive01/theater/th_image/PB/SISJAC/AC/SISJAC-AC-108/SISJAC-AC-108_066.jpg",
+                        "@type": "dctypes:Image",
+                        "format": "image/jpeg",
+                        "width": 167,
+                        "height": 240
+                    },
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "@id": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/annotation/66",
+                            "on": "https://www.dh-jac.net/db1/books/SISJAC-AC-108-/portal/canvas/66",
+                            "resource": {
+                                "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_066/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "width": 1878,
+                                "height": 2700,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.arc.ritsumei.ac.jp/images/PB/Scaler/iiif/SISJAC%21AC%21SISJAC-AC-108%21SISJAC-AC-108_066",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
