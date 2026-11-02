@@ -3102,9 +3102,9 @@
   "access": "セインズベリー日本藝術研究所",
   "temporal": "1926年",
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-03"
  },
  {
   "id": "arc_books-SISJAC_AC_003_",
@@ -3115,9 +3115,9 @@
   "access": "セインズベリー日本藝術研究所",
   "temporal": "1916年",
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-03"
  },
  {
   "id": "arc_books-SISJAC_AC_005_",
@@ -3128,9 +3128,9 @@
   "access": "セインズベリー日本藝術研究所",
   "temporal": "1932年",
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-03"
  },
  {
   "id": "arc_books-SISJAC_AC_153_",
@@ -3141,9 +3141,9 @@
   "access": "セインズベリー日本藝術研究所",
   "temporal": null,
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-03"
  },
  {
   "id": "arc_books-UCB_N7352_B558_0027",
