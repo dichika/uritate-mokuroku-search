@@ -3427,9 +3427,9 @@
   "access": "セインズベリー日本藝術研究所",
   "temporal": "1931年",
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-08"
  },
  {
   "id": "dignl-1870116",
@@ -3453,9 +3453,9 @@
   "access": "セインズベリー日本藝術研究所",
   "temporal": "1925年",
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-08"
  },
  {
   "id": "kochi-R100000140_I000046364_00",
@@ -3479,9 +3479,9 @@
   "access": "カリフォルニア大学バークレー校C. V. スター東アジア図書館",
   "temporal": null,
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-08"
  },
  {
   "id": "arc_books-UCB_N7352_B558_0062",
@@ -3492,9 +3492,9 @@
   "access": "カリフォルニア大学バークレー校C. V. スター東アジア図書館",
   "temporal": "1914年",
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-08"
  },
  {
   "id": "arc_books-UCB_N7352_B558_0103",
@@ -3505,9 +3505,9 @@
   "access": "カリフォルニア大学バークレー校C. V. スター東アジア図書館",
   "temporal": "1916年",
   "provider": "arc",
-  "status": "pending",
+  "status": "done",
   "note": "",
-  "updated": "2026-09-11"
+  "updated": "2026-11-08"
  },
  {
   "id": "arc_books-UCB_N7352_B558_0217",
